@@ -1,0 +1,16 @@
+﻿<!--This is the view that shows all of the game-specific information for the game that the ueser selected
+    from the Main Menu-->
+<Page x:Class="RollToDodge.Views.GameView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:local="clr-namespace:RollToDodge.Views"
+  mc:Ignorable="d" 
+  d:DesignHeight="300" d:DesignWidth="300"
+  Title="GameView">
+
+    <Grid>
+        
+    </Grid>
+</Page>
