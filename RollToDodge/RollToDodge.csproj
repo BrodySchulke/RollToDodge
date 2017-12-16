@@ -72,16 +72,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Armour.cs" />
     <Compile Include="Classes\Food.cs" />
-    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Weapon.cs" />
     <Compile Include="Interfaces\IItem.cs" />
-    <Compile Include="Models\GamesListModel.cs" />
+    <Compile Include="Models\GameModel.cs" />
+    <Compile Include="Models\GameListModel.cs" />
     <Page Include="Views\Characters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\GamesListView.xaml">
+    <Page Include="Views\GameListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,12 +103,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\GamesListViewModel.cs" />
+    <Compile Include="ViewModels\GameListViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="Views\Characters.xaml.cs">
       <DependentUpon>Characters.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GamesListView.xaml.cs">
-      <DependentUpon>GamesListView.xaml</DependentUpon>
+    <Compile Include="Views\GameListView.xaml.cs">
+      <DependentUpon>GameListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GameView.xaml.cs">
       <DependentUpon>GameView.xaml</DependentUpon>

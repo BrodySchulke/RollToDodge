@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\
 RollToDodge
 none
 false
 DEBUG;TRACE
-C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\App.xaml
-5757190053
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\App.xaml
+61391328603
 
-14-1228423797
-14-777051895
-Views\Characters.xaml;Views\GamesListView.xaml;Views\MainMenu.xaml;Views\MainWindow.xaml;Views\Styles\Styles.xaml;
+18-624228629
+14-1248306173
+Views\Characters.xaml;Views\GameListView.xaml;Views\GameView.xaml;Views\MainMenu.xaml;Views\MainWindow.xaml;Views\Styles\Styles.xaml;
 
 False
 

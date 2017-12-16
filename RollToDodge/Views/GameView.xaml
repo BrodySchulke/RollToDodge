@@ -9,8 +9,28 @@
   mc:Ignorable="d" 
   d:DesignHeight="300" d:DesignWidth="300"
   Title="GameView">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
 
     <Grid>
-        
+        <Page x:Name="CharacterListPage">
+            <ScrollViewer VerticalAlignment="Center">
+                <ItemsControl ItemsSource="{Binding CharactersList}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding}" Style="{StaticResource MenuButton}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Page>
+        <Page x:Name="WorldMapPage">
+            
+        </Page>
     </Grid>
 </Page>

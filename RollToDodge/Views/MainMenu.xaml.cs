@@ -1,78 +1,117 @@
-﻿using System;
-using System.Windows;
-using System.IO;
-using System.ComponentModel;
-using System.Windows.Controls;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="MainMenu.xaml.cs" company="Brody Schulke">
+//     Brody Schulke
+// </copyright>
+//-----------------------------------------------------------------------
 namespace RollToDodge.Views
 {
+    using System;
+    using System.ComponentModel;
+    using System.Windows;
+    using System.Windows.Controls;
+
     /// <summary>
     /// Interaction logic for MainMenu.xaml
+    /// Page that represents the MainMenu options - Continue or New Game
     /// </summary>
     public partial class MainMenu : Page, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Boolean that controls visibility of the form for creating a new game
+        /// </summary>
         private bool viewNewGameForm;
 
+        /// <summary>
+        /// Initializes a new instance of the MainMenu class
+        /// </summary>
         public MainMenu()
         {
-            InitializeComponent();
-            viewNewGameForm = false;
+            this.InitializeComponent();
+            this.viewNewGameForm = false;
         }
 
-        //Controls the visibility of the New Game form for adding new games
+        /// <summary>
+        /// EventHander for notifying the MainMenu page when a property changes
+        /// for updating the view
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the new game form
+        /// is visible
+        /// </summary>
         public bool ViewNewGameForm
         {
             get
             {
                 return this.viewNewGameForm;
             }
+
             set
             {
                 this.viewNewGameForm = value;
-                NotifyPropertyChanged("ViewNewGameForm");
+                this.NotifyPropertyChanged("ViewNewGameForm");
             }
         }
 
-        //Handles the continue button logic for moving to a new page
-        //to display all existing games
-        private void Button_Click_Continue(Object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Button logic for when a user decides to continue an existing game.
+        /// Loads the GamesListView page to list existing games the application has stored.
+        /// </summary>
+        /// <param name="sender">Continue button</param>
+        /// <param name="e">Data sent</param>
+        private void Button_Click_Continue(object sender, RoutedEventArgs e)
         {
-            Page GamesListView = new GamesListView();
-            this.NavigationService.Navigate(GamesListView);
+            Page gamesListView = new GameListView();
+            this.NavigationService.Navigate(gamesListView);
         }
         
-        //Handles the new game logic for displaying the form to create
-        //a new game
-        private void Button_Click_New_Game(Object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Button logic for when a user decides to create a new game.
+        /// Makes the new game form visible
+        /// </summary>
+        /// <param name="sender">New Game button</param>
+        /// <param name="e">Data sent</param>
+        private void Button_Click_New_Game(object sender, RoutedEventArgs e)
         {
-            ViewNewGameForm = true;
+            this.ViewNewGameForm = true;
         }
 
-        //Handles save new game logic for creating a new game based on the 
-        //name that the user provides
-        private void Button_Click_Save_New_Game(Object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Button logic for when a user decides to save their New Game and have it created
+        /// </summary>
+        /// <param name="sender">Save New Game button</param>
+        /// <param name="e">Data sent</param>
+        private void Button_Click_Save_New_Game(object sender, RoutedEventArgs e)
         {
-            if (((App)Application.Current).AddGame(this.NewGameName.Text))
+            if (!((App)Application.Current).AddGame(this.NewGameName.Text))
             {
-                //Change this to display an error
+                // Change this to display an error
                 return;
             }
-            this.NewGameName.Text = "";
+
+            this.ViewNewGameForm = false;
+            this.NewGameName.Text = string.Empty;
         }
 
-        //Handles the cancel new game button if a user decides they no longer
-        //want to create a new game
-        private void Button_Click_Cancel_New_Game(Object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Button logic for when decides to cancel the new game creation
+        /// </summary>
+        /// <param name="sender">Cancel New Game button</param>
+        /// <param name="e">Data sent</param>
+        private void Button_Click_Cancel_New_Game(object sender, RoutedEventArgs e)
         {
             this.ViewNewGameForm = false;
-            this.NewGameName.Text = "";
+            this.NewGameName.Text = string.Empty;
         }
 
-        //Notifies the view if a property changes so the view can be updated
+        /// <summary>
+        /// Notifies the view that a property has changed and updates the view
+        /// </summary>
+        /// <param name="propertyName">Name of the property that was updated</param>
         private void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

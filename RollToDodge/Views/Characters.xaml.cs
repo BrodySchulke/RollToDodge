@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="Characters.xaml.cs" company="Brody Schulke">
+//     Brody Schulke
+// </copyright>
+//-----------------------------------------------------------------------
 namespace RollToDodge.Views
 {
+    using System.Windows.Controls;
+
     /// <summary>
     /// Interaction logic for Characters.xaml
+    /// Represents the list of Characters in the context of whichever game was chosen
     /// </summary>
     public partial class Characters : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the Characters class
+        /// </summary>
         public Characters()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

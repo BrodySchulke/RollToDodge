@@ -1,7 +1,6 @@
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\bin\Debug\RollToDodge.exe.config
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\bin\Debug\RollToDodge.exe
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\bin\Debug\RollToDodge.pdb
-c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\RollToDodge.csprojResolveAssemblyReference.cache
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\App.g.cs
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\RollToDodge_MarkupCompile.cache
 c:\users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\RollToDodge.g.resources
@@ -19,5 +18,8 @@ C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\
 C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\Characters.baml
 C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\MainMenu.baml
 C:\Users\brschulk\Documents\Visual Studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\Styles\Styles.baml
-C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GamesListView.g.cs
-C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GamesListView.baml
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GameListView.g.cs
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GameView.g.cs
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GameListView.baml
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\Views\GameView.baml
+C:\Users\brschulk\documents\visual studio 2017\Projects\RollToDodge\RollToDodge\obj\Debug\RollToDodge.csprojResolveAssemblyReference.cache
